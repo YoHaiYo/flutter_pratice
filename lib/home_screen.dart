@@ -21,6 +21,7 @@ import 'ch5/pageview_screen.dart';
 import 'ch5/single_scroll_screen.dart';
 import 'ch5/ui_exam_1.dart';
 import 'ch5/ui_exam_teacher.dart';
+import 'gpt_test/shopping_app.dart';
 import 'gpt_test/navi_test.dart';
 import 'my_practice/carrot_maket.dart';
 
@@ -74,12 +75,17 @@ class HomeScreen extends StatelessWidget {
                 page: UiExamTeacher()),
             button2(
                 context: context,
-                text: "CarrotMarket",
+                text: "★CarrotMarket",
                 page: CarrotMarket()),
             button2(
                 context: context,
                 text: "MyNavigationBar",
                 page: MyNavigationBar()),
+            button2(
+                context: context,
+                text: "ShoppingApp",
+                page: ShoppingApp()),
+
 
           ],
         ),

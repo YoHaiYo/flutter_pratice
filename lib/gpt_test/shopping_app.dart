@@ -3,7 +3,7 @@
 
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(ShoppingApp());
 
 class Product {
   final String name;
@@ -14,7 +14,7 @@ class Product {
   Product({required this.name, required this.imageUrl, required this.description, required this.price});
 }
 
-class MyApp extends StatelessWidget {
+class ShoppingApp extends StatelessWidget {
   final List<Product> products = [
     Product(
       name: "Summer Dress",
@@ -36,7 +36,7 @@ class MyApp extends StatelessWidget {
     ),
     Product(
       name: "Winter Coat",
-      imageUrl: "https://www.landsend.com/article/tips-picking-right-length-winter-coats/images/20200102-m-02.jpg",
+      imageUrl: "https://image.musinsa.com/mfile_s01/2019/10/04/4efdd2f969559e8b1c92e99f32ded48e160958.jpg",
       description: "This is a Winter Coat",
       price: 139.99,
     ),
@@ -64,7 +64,7 @@ class MyApp extends StatelessWidget {
       ),
       home: Scaffold(
         appBar: AppBar(
-          title: Text("SSH 쇼핑몰"),
+          title: const Text("SSH 쇼핑몰"),
         ),
         body: GridView.builder(
           itemCount: products.length,
@@ -160,6 +160,8 @@ class MyApp extends StatelessWidget {
               ),
             );
           },
+
+
         ),
       ),
     );
@@ -256,5 +258,34 @@ class ProductDetailPage extends StatelessWidget {
       ),
     );
   }
+
+  Widget button({
+    required BuildContext context,
+    required String text,
+    // page : 이동하려는 화면
+    required Widget page,
+  }) {
+    return Container(
+      //double.infinity : 최대값 사용
+      width: double.infinity, height: 70, padding: EdgeInsets.only(top: 20),
+      child: ElevatedButton(
+        //onPressed : 버튼눌렀을때 활성화싴킴
+        onPressed: () {
+          print('HomeScreen.button 입니다.');
+          // 화면이동
+          Navigator.push(context, MaterialPageRoute(
+            builder: (context) {
+              return page;
+            },
+          ));
+        },
+        child: Text(
+          text,
+          style: TextStyle(fontSize: 20),
+        ),
+      ),
+    );
+  }
+
 }
 
