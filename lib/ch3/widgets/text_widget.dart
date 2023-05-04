@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class TextWidget extends StatelessWidget {
-  const TextWidget({Key? key}) : super(key: key);
+  const TextWidget({Key? key, required String label, required int fontSize}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

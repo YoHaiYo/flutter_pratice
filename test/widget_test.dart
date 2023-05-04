@@ -28,7 +28,7 @@ void main() {
   // Variable();
   // Operator();
   // Method();
-  // Method1();
+  Method1();
   //Conditional();
   // Conditional_test();
   // Ch1HomeworkConditional();

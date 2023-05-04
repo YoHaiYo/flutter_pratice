@@ -21,9 +21,25 @@ import 'ch5/pageview_screen.dart';
 import 'ch5/single_scroll_screen.dart';
 import 'ch5/ui_exam_1.dart';
 import 'ch5/ui_exam_teacher.dart';
+import 'ch6/bottom_navigation_bar_screen.dart';
+import 'ch6/default_tab_controller_screen.dart';
+import 'ch6/dialog_screen.dart';
+import 'ch6/route/route_screen.dart';
+import 'ch6/tabbar_exam.dart';
+import 'ch7/route_named/_main_screen.dart';
+import 'ch7/todo_list/todo_list_screen.dart';
+import 'ch8/future_screen.dart';
+import 'ch8/news_screen.dart';
+import 'ch8/open_api_screen.dart';
+import 'gpt_test/todolist_down.dart';
+import 'ch6/todolist_ch6_homework/hw_todolist.dart';
+import 'ch6/ui_exam_1_review.dart';
+import 'ch6/widgets/bottom_sheet_screen.dart';
+import 'ch6/widgets/tapbar_screen.dart';
 import 'gpt_test/shopping_app.dart';
 import 'gpt_test/navi_test.dart';
 import 'my_practice/carrot_maket.dart';
+import 'my_practice/my_chatgpt.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -38,6 +54,49 @@ class HomeScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
+            button2(
+                context: context,
+                text: "★MyChatGPT",
+                page: MyChatGPT()),
+            button2(
+                context: context,
+                text: "CarrotMarket",
+                page: CarrotMarket()),
+            button2(
+                context: context,
+                text: "MyNavigationBar",
+                page: MyNavigationBar()),
+            button2(
+                context: context,
+                text: "ShoppingApp",
+                page: ShoppingApp()),
+            button2(
+                context: context,
+                text: "6주차과제 ToDoList",
+                page: HWToDoList()),
+            button2(
+                context: context,
+                text: "TodoListScreen",
+                page: TodoListScreen()),
+            button2(
+                context: context,
+                text: "RouteNamed",
+                page: RouteNamed()),
+            button2(
+                context: context,
+                text: "FutureScreen",
+                page: FutureScreen()),
+            button2(
+                context: context,
+                text: "NewsScreen",
+                page: NewsScreen()),
+            button2(
+                context: context,
+                text: "OpenApiScreen",
+                page: OpenApiScreen()),
+
+            //-------------------------------------//
+
             button(
                 context: context,
                 text: "Scaffold, Appbar",
@@ -73,18 +132,38 @@ class HomeScreen extends StatelessWidget {
                 context: context,
                 text: "UiExamTeacher",
                 page: UiExamTeacher()),
-            button2(
+            button(
                 context: context,
-                text: "★CarrotMarket",
-                page: CarrotMarket()),
-            button2(
+                text: "UIExam1Review",
+                page: UIExam1Review()),
+            button(
                 context: context,
-                text: "MyNavigationBar",
-                page: MyNavigationBar()),
-            button2(
+                text: "BottomNavigationbarScreen",
+                page: BottomNavigationbarScreen()),
+            button(
                 context: context,
-                text: "ShoppingApp",
-                page: ShoppingApp()),
+                text: "TabBarScreen",
+                page: TabBarScreen()),
+            button(
+                context: context,
+                text: "TabBarExamScreen",
+                page: TabBarExamScreen()),
+            button(
+                context: context,
+                text: "DefaultTabControllerScreen",
+                page: DefaultTabControllerScreen()),
+            button(
+                context: context,
+                text: "DialogScreen",
+                page: DialogScreen()),
+            button(
+                context: context,
+                text: "BottomSheetScreen",
+                page: BottomSheetScreen()),
+            button(
+                context: context,
+                text: "RouteScreen",
+                page: RouteScreen()),
 
 
           ],
