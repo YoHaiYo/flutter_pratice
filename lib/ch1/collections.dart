@@ -77,11 +77,11 @@ class Collections {
     int first = listInt[1];
     print('Collections.listRemove 1 : $first');
 
-    // removelast
+    // removelast : 마지막값 주기
     listInt.removeLast();
     print('Collections.listRemove 2 : $listInt');
 
-    // removeAt
+    // removeAt : 1번쨰 값 지우기
     listInt.removeAt(0);
     print('Collections.listRemove 3 : $listInt');
 
@@ -89,7 +89,7 @@ class Collections {
     listInt.remove(3);
     print('Collections.listRemove 4 : $listInt');
 
-    //
+    // clear() : 싹 지우기
     listInt.clear();
     print('Collections.listRemove 5 : $listInt');
   }
@@ -101,7 +101,7 @@ class Collections {
     List<int> listInt = [4, 5, 8, 5, 15, 87, 212, 85, 56, 999];
     print('Collections.sort : $listInt');
 
-    // 오른차순으로 정렬하기
+    // sort : 오른차순으로 정렬하기
     listInt.sort();
     print('Collections.sort 1 : $listInt');
 
@@ -129,7 +129,7 @@ class Collections {
       55: 100.1,
       33: 6,
     };
-    print('Collections.collectionMap : $map');
+    print('Collections.collectionMap 1 : $map');
 
     // 1. 읽어보기
     // 2. 추가하기
@@ -138,34 +138,35 @@ class Collections {
 
     // 1. 읽어보기
     // var 타입은 아무거나 올 수 있음! (String, int, bool 등등 변수타입 전부 쓸수잇다.)
+    // key가 55인 value를 읽어와라.
     var result1 = map[55];
-    print('Collections.collectionMap : $result1');
+    print('Collections.collectionMap 2 : $result1');
 
     // 2. 추가하기 1 : putIfAbsent
     // 만약에 비어 있다면 데이터를 추가해주세요.
     map.putIfAbsent(("name"), () => "임미나"); // 두번째 ()는 그냥 함수 형식상()임.
-    print('Collections.collectionMap : $map');
+    print('Collections.collectionMap 3 : $map');
 
     // 한번 넣었으면 또 넣을 수가 없다.
     map.putIfAbsent(("name"), () => "임미나2");
-    print('Collections.collectionMap : $map');
+    print('Collections.collectionMap 4 : $map');
 
     // 2. 추가하기 2 : map[key] <- 요게 편함~
     // putIfAbsent와의 차이점 : map[key]은 값이 비어 있을 때는 추가, 값이 있을때는 변경
     map["age"] = 17;
-    print('Collections.collectionMap : $map');
+    print('Collections.collectionMap 5 : $map');
 
-    map["age"] = 60;
-    print('Collections.collectionMap : $map');
+    map["age"] = 77;
+    print('Collections.collectionMap 6 : $map');
 
     // 4. 제거하기 : remove함수가 remove 하나 뿐입니다. 그 이유는 제거하는 거는 map에서는 순서가 없기 때문이죠.
 
     map.remove("age");
-    print('Collections.collectionMap : $map');
+    print('Collections.collectionMap 7 : $map');
 
     // 4-1. 전부 제거하기
     map.clear();
-    print('Collections.collectionMap : $map');
+    print('Collections.collectionMap 8 : $map');
 
     // Map<key의 타입, value의 타입>
     // 보통 key는 String을 쓰고, value는 다양한 타입
@@ -180,7 +181,7 @@ class Collections {
       "age": 23,
       "weight": 49.7,
     };
-    print('Collections.collectionMap : $typeMap');
+    print('Collections.collectionMap 9 : $typeMap');
   }
 
   //Set 타입 : List, Map 과 닮았다.

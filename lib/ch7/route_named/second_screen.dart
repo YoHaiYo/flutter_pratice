@@ -48,11 +48,14 @@ class _SecondScreenState extends State<SecondScreen> {
           ElevatedButton(
             onPressed: () {
 
-              List<String> data = [
-                "안녕하세요~",
-                "잘부탁해요.",
-                "저도요.",
-              ];
+              // List<String> data = [
+              //   "안녕하세요~",
+              //   "잘부탁해요.",
+              //   "저도요.",
+              // ];
+
+              List<String> data =
+                ["안녕하세요~"];
 
               Navigator.pop(context, data);
             },

@@ -8,8 +8,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:lecture_230304/ch1/collections.dart';
+import 'package:lecture_230304/ch1/conditional.dart';
 import 'package:lecture_230304/ch1/for_loop.dart';
 import 'package:lecture_230304/ch1/method.dart';
+import 'package:lecture_230304/ch1/method_review.dart';
+import 'package:lecture_230304/ch1/operator.dart';
+import 'package:lecture_230304/ch1/variable.dart';
 import 'package:lecture_230304/ch2/animal/bird.dart';
 import 'package:lecture_230304/ch2/animal/dog.dart';
 import 'package:lecture_230304/ch2/animal/lion.dart';
@@ -28,14 +32,15 @@ void main() {
   // Variable();
   // Operator();
   // Method();
-  Method1();
-  //Conditional();
+  // Method1();
+  // MethodReview();
+  // Conditional();
   // Conditional_test();
   // Ch1HomeworkConditional();
 
   // --------------- 2주차 ---------------
 
-  // Collections();
+  Collections();
   // Forloop();
 
   // Person(); // 이게 생성자임.

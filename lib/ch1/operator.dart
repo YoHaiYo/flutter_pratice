@@ -40,7 +40,10 @@ class Operator {
     print('Operator.add name1 : $name');
     name += " 저는 임미나에요!.";
     print('Operator.add name2 : $name');
+
+    print("---add---");
   }
+
 
   void minus() {
     int width = 100;
@@ -50,6 +53,7 @@ class Operator {
     width = 30 - 10 ;
     print('Operator.minus width2 : $width');
     print('Operator.minus width3 : $width');
+    print("---minus---");
   }
 
   //나누기
@@ -57,16 +61,18 @@ class Operator {
     double age = 10 / 2 ; //int는 나누기 안됨.
     print('Operator.divide age : $age');
 
-    double age2 =  5 % 2 ; // % : 나누기 후 나머지를 반환함. 나머지 0.5를 반올림해서 1로 출력
+    double age2 =  8 % 3 ; // % : 나누기 후 나머지를 반환함. 나머지 0.5를 반올림해서 1로 출력
     print('Operator.divide age2 : $age2');
 
     int age3 = 5~/2; // ~/ : 몫을 구해서 정수로 반환. 그래서 int로 써야됨.
     print('Operator.divide age3 : $age3');
+    print("---divide---");
   }
 
   void multiple(){
     int age = 10 * 20;
     print('Operator.multiple age : $age');
+    print("---multiple---");
   }
 
   //증감연산자
@@ -80,6 +86,7 @@ class Operator {
     age--;
     age--;
     print('Operator.upAndDown age3 : $age');
+    print("---upAndDown---");
   }
 
   // 간단한 예제. 문자 사이에 변수 출력하기.
@@ -96,6 +103,7 @@ class Operator {
     String name = "임미나";
     int age = 17;
     print('안녕하세요. 저는 $name입니다. 제 나이는 $age살입니다.');
+    print("---simpleTest---");
   }
 
   // 비교연산자 : 개발자들은 정말 자주쓰는 연산자에요.
@@ -105,6 +113,7 @@ class Operator {
     double value2 = 2.1;
     print('Operator.compare ${value1 <= value2}'); // { }로 감싸줘야 긴 비교가 인식됨 !
     // 같으면 True , 틀리면 False
+    print("---compare---");
   }
 
   // 논리연산자 : &&=and, ||=or (쉬프트 원화키)
@@ -112,6 +121,7 @@ class Operator {
     // double v1 = 2;
     // double v2 = 3;
     print('Operator.logical : ${true && true}');
+    print("---logical---");
   }
 
   //타입변환, 형변환.
@@ -122,6 +132,7 @@ class Operator {
     age = 50; // 50
     age = weight.toInt(); //age가 int 타입이기 때문에, double 타입인 weight를 int로 바꿔줘야 합니다.
     print('Operator.typeCasting age : $age');
+    print("---typeCasting---");
   }
 
 }
