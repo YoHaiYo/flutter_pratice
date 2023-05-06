@@ -1,0 +1,27 @@
+{
+  "status" : "ok",
+  "totalResults" : 90,
+  "articles" : [
+
+    {
+      "source" : {
+        "id" : null,
+        "name" : "Gizmodo.jp"
+      },
+      "author" : "name",
+      "title" : "Apple"
+
+    },
+
+    {
+      "source" : {
+        "id" : "17",
+        "name" : "Mina"
+      },
+      "author" : "Myoyee",
+      "title" : "Twice"
+
+    }
+
+  ]
+}
