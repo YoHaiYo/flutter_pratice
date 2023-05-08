@@ -7,8 +7,13 @@ class ContainerWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     /// 지금 저희가 하는건 Container 위젯을 어떻게 사용하는지 배움
-    return Container(
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("ContainerWidget"),
+      ),
+      body: Container(
       /// double.infinity : 최대한의 길이로 설정
       // width: double.infinity,
       width: 200,
@@ -124,6 +129,8 @@ class ContainerWidget extends StatelessWidget {
           ),
         ],
       ),
+    ),
+
     );
   }
 }

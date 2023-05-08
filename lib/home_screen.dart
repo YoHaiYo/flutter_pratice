@@ -99,6 +99,10 @@ class HomeScreen extends StatelessWidget {
 
             button(
                 context: context,
+                text: "ContainerWidget",
+                page: ContainerWidget()),
+            button(
+                context: context,
                 text: "Scaffold, Appbar",
                 page: ScaffoldWidget()),
             button(

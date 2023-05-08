@@ -19,7 +19,8 @@ class MyChatGPT extends StatefulWidget {
 
 Future<String> generateResponse(String prompt) async {
   // API 키 지우고 깃 업로드
-  const apiKey = "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";
+  const apiKey = "Your API";
+  // const apiKey = "";
   var url = Uri.https("api.openai.com", "/v1/completions");
   final response = await http.post(
     url,

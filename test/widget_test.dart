@@ -19,6 +19,7 @@ import 'package:lecture_230304/ch2/animal/dog.dart';
 import 'package:lecture_230304/ch2/animal/lion.dart';
 import 'package:lecture_230304/ch2/ch2_homework/benz.dart';
 import 'package:lecture_230304/ch2/ch2_homework/genesis.dart';
+import 'package:lecture_230304/ch2/ch2_homework/homework_teacher.dart';
 import 'package:lecture_230304/ch2/ch2_homework/sonata.dart';
 import 'package:lecture_230304/ch2/person.dart';
 import 'package:lecture_230304/ch2/ch2_homework/car.dart';
@@ -40,7 +41,7 @@ void main() {
 
   // --------------- 2주차 ---------------
 
-  Collections();
+  // Collections();
   // Forloop();
 
   // Person(); // 이게 생성자임.
@@ -58,8 +59,8 @@ void main() {
   // person2.weight = 49.7;
   //
   // print('person2 : $person2');
-
-  //위 처럼 name, age, weight 따로 쓰기 귀찮으면 아래처럼 한꺼번 쓸 수 있다.
+  //
+  // 위 처럼 name, age, weight 따로 쓰기 귀찮으면 아래처럼 한꺼번 쓸 수 있다.
   // Person my = Person("임미나",17,49.9);
   //
   // Person my = Person("임미나", 17);
@@ -107,6 +108,7 @@ void main() {
   // car.run();
   // car.stop();
 
+  //
   // Benz benz = Benz(owner: "김사나", carName: '메르세데스 벤츠', price: 9000);
   // benz.repair();
   // benz.sell();
@@ -116,5 +118,7 @@ void main() {
   //
   // Sonata sonata = Sonata(owner: "김사나", carName: '소나타', price: 4000);
   // sonata.oiling();
+
+  Ch2Homework();
 
 }
