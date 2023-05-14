@@ -108,6 +108,8 @@ class Operator {
 
   // 비교연산자 : 개발자들은 정말 자주쓰는 연산자에요.
   // ==,!=,<,>,>=,<=
+  // == : 같다
+  // != : 같지않다.
   void compare(){
     double value1 = 2;
     double value2 = 2.1;

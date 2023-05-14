@@ -31,6 +31,8 @@ import 'ch7/todo_list/todo_list_screen.dart';
 import 'ch8/future_screen.dart';
 import 'ch8/news_screen.dart';
 import 'ch8/open_api_screen.dart';
+import 'ch9_selfstudy/animation_practice.dart';
+import 'ch9_selfstudy/drop_tracker.dart';
 import 'gpt_test/todolist_down.dart';
 import 'ch6/todolist_ch6_homework/hw_todolist.dart';
 import 'ch6/ui_exam_1_review.dart';
@@ -54,6 +56,14 @@ class HomeScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
+            button2(
+                context: context,
+                text: "DropTracker",
+                page: DropTracker()),
+            button2(
+                context: context,
+                text: "AnimationPractice",
+                page: AnimationPractice()),
             button2(
                 context: context,
                 text: "★MyChatGPT",
@@ -96,11 +106,28 @@ class HomeScreen extends StatelessWidget {
                 page: OpenApiScreen()),
 
             //-------------------------------------//
-
-            button(
+            // 복습중
+            button3(
+                context: context,
+                text: "ColumnRowWidget",
+                page: ColumnRowWidget()),
+            button3(
+                context: context,
+                text: "ColumnWidget",
+                page: ColumnWidget()),
+            button3(
                 context: context,
                 text: "ContainerWidget",
                 page: ContainerWidget()),
+            button3(
+                context: context,
+                text: "RowWidget",
+                page: RowWidget()),
+            button3(
+                context: context,
+                text: "TextWidget",
+                page: TextWidget(label: '내용', fontSize: 15,)),
+            //-------------------------------------//
             button(
                 context: context,
                 text: "Scaffold, Appbar",
@@ -216,6 +243,37 @@ class HomeScreen extends StatelessWidget {
       child: ElevatedButton(
         style: ButtonStyle(
           backgroundColor: MaterialStateProperty.all<Color>(Colors.red),
+        ),
+        //onPressed : 버튼눌렀을때 활성화싴킴
+        onPressed: () {
+          print('HomeScreen.button 입니다.');
+          // 화면이동
+          Navigator.push(context, MaterialPageRoute(
+            builder: (context) {
+              return page;
+            },
+          ));
+        },
+        child: Text(
+          text,
+          style: TextStyle(fontSize: 20),
+        ),
+      ),
+    );
+  }
+
+  Widget button3({
+    required BuildContext context,
+    required String text,
+    // page : 이동하려는 화면
+    required Widget page,
+  }) {
+    return Container(
+      //double.infinity : 최대값 사용
+      width: double.infinity, height: 70, padding: EdgeInsets.only(top: 20),
+      child: ElevatedButton(
+        style: ButtonStyle(
+          backgroundColor: MaterialStateProperty.all<Color>(Colors.green),
         ),
         //onPressed : 버튼눌렀을때 활성화싴킴
         onPressed: () {

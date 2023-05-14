@@ -9,6 +9,7 @@ class ColumnRowWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // 여기서 Container는 배경색 용도로 쓰였음.
     return Container(
       color: Colors.lightGreen,
       child: Column(
@@ -18,25 +19,27 @@ class ColumnRowWidget extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              _container(100, 120, Colors.red),
-              _container(150, 100, Colors.yellow),
+              _container(100, 100, Colors.red),
+              _container(150, 80, Colors.yellow),
             ],
           ),
 
           /// 중단 ---------------------
-          /// 컬럼 안에 있는 로우를, 세로 영역을 최대치로 확장
+
+          /// Expanded : 컬럼 안에 있는 로우를, 세로 영역을 최대치로 확장
+          /// Expanded 대신 SizedBox쓰면 컨테이너가 상단 바로 아래로 붙어버림!
           Expanded(
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                _container(170, 250, Colors.white),
+                _container(170, 200, Colors.white),
               ],
             ),
           ),
 
           /// 하단 ---------------------
           SizedBox(
-            height: 100,
+            height: 125,
             child: Column(
               children: [
                 Row(
@@ -80,6 +83,7 @@ class ColumnRowWidget extends StatelessWidget {
       width: width,
       height: height,
       color: color,
+      // decoration: BoxDecoration(border: Border.all(color: bordercolor)),
     );
   }
 }
