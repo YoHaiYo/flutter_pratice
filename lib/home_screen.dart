@@ -32,6 +32,7 @@ import 'ch8/future_screen.dart';
 import 'ch8/news_screen.dart';
 import 'ch8/open_api_screen.dart';
 import 'ch9_selfstudy/animation_practice.dart';
+import 'ch9_selfstudy/draggable_widget.dart';
 import 'ch9_selfstudy/drop_tracker.dart';
 import 'gpt_test/todolist_down.dart';
 import 'ch6/todolist_ch6_homework/hw_todolist.dart';
@@ -56,6 +57,10 @@ class HomeScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
+            button2(
+                context: context,
+                text: "DraggableWidget",
+                page: DraggableWidget()),
             button2(
                 context: context,
                 text: "DropTracker",
