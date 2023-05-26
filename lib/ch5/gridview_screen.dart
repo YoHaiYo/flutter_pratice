@@ -126,7 +126,7 @@ class _GridViewScreenState extends State<GridViewScreen> {
     return const SliverGridDelegateWithFixedCrossAxisCount(
       crossAxisCount: 3,
 
-      /// 기준축과 교차축의 아이템 사이즈 비율
+      /// childAspectRatio : 기준축과 교차축의 아이템 사이즈 비율
       /// 1 : 기준축, 교차축 동일
       /// 0.5 : 기준축이 교차축의 2배
       /// 2 : 교차축이 기준축의 2배

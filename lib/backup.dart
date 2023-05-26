@@ -54,12 +54,8 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text("플로터 위젯 연습"),
       ),
-
-      body: GridView.count(
-          crossAxisCount: 3,
-        crossAxisSpacing: 0,
-        mainAxisSpacing: 0,
-        childAspectRatio: 2.5,
+      body: SingleChildScrollView(
+        child: Column(
           children: [
             button2(
                 context: context,
@@ -204,8 +200,39 @@ class HomeScreen extends StatelessWidget {
                 context: context,
                 text: "RouteScreen",
                 page: RouteScreen()),
+
+
           ],
         ),
+      ),
+    );
+  }
+
+  Widget button({
+    required BuildContext context,
+    required String text,
+    // page : 이동하려는 화면
+    required Widget page,
+  }) {
+    return Container(
+      //double.infinity : 최대값 사용
+      width: double.infinity, height: 70, padding: EdgeInsets.only(top: 20),
+      child: ElevatedButton(
+        //onPressed : 버튼눌렀을때 활성화싴킴
+        onPressed: () {
+          print('HomeScreen.button 입니다.');
+          // 화면이동
+          Navigator.push(context, MaterialPageRoute(
+            builder: (context) {
+              return page;
+            },
+          ));
+        },
+        child: Text(
+          text,
+          style: TextStyle(fontSize: 20),
+        ),
+      ),
     );
   }
 
@@ -216,7 +243,8 @@ class HomeScreen extends StatelessWidget {
     required Widget page,
   }) {
     return Container(
-      padding: EdgeInsets.all(5),
+      //double.infinity : 최대값 사용
+      width: double.infinity, height: 70, padding: EdgeInsets.only(top: 20),
       child: ElevatedButton(
         style: ButtonStyle(
           backgroundColor: MaterialStateProperty.all<Color>(Colors.red),
@@ -233,35 +261,7 @@ class HomeScreen extends StatelessWidget {
         },
         child: Text(
           text,
-          style: TextStyle(fontSize: 10),
-        ),
-      ),
-    );
-  }
-
-  Widget button({
-    required BuildContext context,
-    required String text,
-    // page : 이동하려는 화면
-    required Widget page,
-  }) {
-    return Container(
-      padding: EdgeInsets.all(5),
-      child: ElevatedButton(
-        //onPressed : 버튼눌렀을때 활성화싴킴
-        onPressed: () {
-          print('HomeScreen.button 입니다.');
-          // 화면이동
-          Navigator.push(context, MaterialPageRoute(
-            builder: (context) {
-              return page;
-            },
-           ),
-          );
-        },
-        child: Text(
-          text,
-          style: TextStyle(fontSize: 10),
+          style: TextStyle(fontSize: 20),
         ),
       ),
     );
@@ -274,7 +274,8 @@ class HomeScreen extends StatelessWidget {
     required Widget page,
   }) {
     return Container(
-      padding: EdgeInsets.all(5),
+      //double.infinity : 최대값 사용
+      width: double.infinity, height: 70, padding: EdgeInsets.only(top: 20),
       child: ElevatedButton(
         style: ButtonStyle(
           backgroundColor: MaterialStateProperty.all<Color>(Colors.green),
@@ -291,7 +292,7 @@ class HomeScreen extends StatelessWidget {
         },
         child: Text(
           text,
-          style: TextStyle(fontSize: 10),
+          style: TextStyle(fontSize: 20),
         ),
       ),
     );
