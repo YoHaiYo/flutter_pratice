@@ -34,10 +34,13 @@ import 'ch8/news_screen.dart';
 import 'ch8/open_api_screen.dart';
 import 'ch9_selfstudy/animation_practice.dart';
 import 'ch9_selfstudy/card_screen.dart';
+import 'ch9_selfstudy/checkbox_etc_screen.dart';
+import 'ch9_selfstudy/date_picker.dart';
 import 'ch9_selfstudy/draggable_widget.dart';
 import 'ch9_selfstudy/drop_tracker.dart';
 import 'ch9_selfstudy/listview_screen.dart';
 import 'ch9_selfstudy/progress_screen.dart';
+import 'ch9_selfstudy/textfield_screen.dart';
 import 'gpt_test/todolist_down.dart';
 import 'ch6/todolist_ch6_homework/hw_todolist.dart';
 import 'ch6/ui_exam_1_review.dart';
@@ -156,7 +159,18 @@ class HomeScreen extends StatelessWidget {
                 context: context,
                 text: "ProgressScreen",
                 page: ProgressScreen()),
-
+            button3(
+                context: context,
+                text: "TextFieldScreen",
+                page: TextFieldScreen()),
+            button3(
+                context: context,
+                text: "CheckboxEtcScreen",
+                page: CheckboxEtcScreen()),
+            button3(
+                context: context,
+                text: "DatepickerScreen",
+                page: DatepickerScreen()),
 
             //-------------------------------------//
             button(
